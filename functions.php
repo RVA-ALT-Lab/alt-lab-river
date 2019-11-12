@@ -71,6 +71,11 @@ require get_template_directory() . '/inc/woocommerce.php';
 require get_template_directory() . '/inc/editor.php';
 
 
+/**
+ * Load custom post types
+ */
+require get_template_directory() . '/inc/custom-post-types.php';
+
 //ADD FONTS and VCU Brand Bar
 add_action('wp_enqueue_scripts', 'alt_lab_scripts');
 function alt_lab_scripts() {
@@ -164,4 +169,22 @@ function river_header_images(){
        }
      }
      return $html;
+}
+
+
+function river_main_text(){
+  $main_content = get_field('main_content');
+  $html = '';
+  if ($main_content){
+    foreach ($main_content as $content_block) {
+      if ($content_block['aside']){
+        $html .= '<div class="fotj-sidebar">' . $content_block['aside']->post_content . '</div>';
+      }
+      if ($content_block['main_text']){   
+        $html .= '<div class="fotj-content">' . $content_block['main_text'] . '</div>';
+      }
+    }
+    return $html;
+  }
+
 }

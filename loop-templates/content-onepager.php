@@ -25,11 +25,14 @@
 					 ;?>
 				</div>
 		</div>
-		<div class="sub-title">The Natural and Human History of the James River Watershed</div>
+		<div class="sub-title"><?php echo bloginfo('description');?></div>
 		<div class="scroll-to-content-arrow">
 		<a href="#homepage-content"><img src="<?php echo get_stylesheet_directory_uri();?>/imgs/arrow-down-white.svg"></a>
 		</div>
 		<div class="vert-path">
+		<?php echo river_main_text();?>
+
+
 			<div class="fotj-sidebar">
 				<div class="side-join-us">
 					Come join us on our next VCU adventure down the James River
