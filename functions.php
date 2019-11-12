@@ -177,12 +177,16 @@ function river_main_text(){
   $html = '';
   if ($main_content){
     foreach ($main_content as $content_block) {
+      $html .= '<div class="fotj-sidebar">';
       if ($content_block['aside']){
-        $html .= '<div class="fotj-sidebar">' . $content_block['aside']->post_content . '</div>';
+        $html .=  $content_block['aside']->post_content;
       }
+      $html .= '</div>';
+      $html .= '<div class="fotj-content">';
       if ($content_block['main_text']){   
-        $html .= '<div class="fotj-content">' . $content_block['main_text'] . '</div>';
+        $html .= $content_block['main_text'];
       }
+      $html .= '</div>';
     }
     return $html;
   }
