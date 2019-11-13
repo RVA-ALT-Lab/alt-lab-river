@@ -177,16 +177,28 @@ function river_main_text(){
   $html = '';
   if ($main_content){
     foreach ($main_content as $content_block) {
-      $html .= '<div class="fotj-sidebar">';
-      if ($content_block['aside']){
-        $html .=  $content_block['aside']->post_content;
+      //var_dump($content_block['content_type']);
+      if ($content_block['content_type'] == 'full-width'){
+        $html .= '<div>' . $content_block['main_text'] . '</div>';
+      } else {
+        $html .= '<div class="fotj-sidebar">';
+        if ($content_block['aside']){
+          if(get_field('aside_type',$content_block['aside']->ID)) {
+            $html .= '<div class="fotj-quote">';
+            $html .=  $content_block['aside']->post_content;
+            $html .= '<span class="fotj-quote-author">' . get_field('quote_author',$content_block['aside']->ID) . '</span>';
+            $html .= '</div>';
+          } else {
+            $html .=  $content_block['aside']->post_content;
+          }
+        }
+        $html .= '</div>';
+        $html .= '<div class="fotj-content">';
+        if ($content_block['main_text']){   
+          $html .= $content_block['main_text'];
+        }
+        $html .= '</div>';
       }
-      $html .= '</div>';
-      $html .= '<div class="fotj-content">';
-      if ($content_block['main_text']){   
-        $html .= $content_block['main_text'];
-      }
-      $html .= '</div>';
     }
     return $html;
   }
