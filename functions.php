@@ -171,59 +171,61 @@ function river_header_images(){
      return $html;
 }
 
+//make sure ACF IS ON
+if (!class_exists('ACF')) {
 
-function river_main_text(){
-  $main_content = get_field('main_content');
-  $html = '';
-  if ($main_content){
-    foreach ($main_content as $content_block) {
-      //var_dump($content_block['content_type']);
-      if ($content_block['content_type'] == 'full-width'){
-        $html .= '<div>' . $content_block['main_text'] . '</div>';
-      } else {
-        $html .= '<div class="fotj-sidebar">';
-        if ($content_block['aside']){
-          if(get_field('aside_type',$content_block['aside']->ID)) {
-            $html .= '<div class="fotj-quote">';
-            $html .=  $content_block['aside']->post_content;
-            $html .= '<span class="fotj-quote-author">' . get_field('quote_author',$content_block['aside']->ID) . '</span>';
-            $html .= '</div>';
-          } else {
-            $html .=  $content_block['aside']->post_content;
+  function river_main_text(){
+    $main_content = get_field('main_content');
+    $html = '';
+    if ($main_content){
+      foreach ($main_content as $content_block) {
+        //var_dump($content_block['content_type']);
+        if ($content_block['content_type'] == 'full-width'){
+          $html .= '<div>' . $content_block['main_text'] . '</div>';
+        } else {
+          $html .= '<div class="fotj-sidebar">';
+          if ($content_block['aside']){
+            if(get_field('aside_type',$content_block['aside']->ID)) {
+              $html .= '<div class="fotj-quote">';
+              $html .=  $content_block['aside']->post_content;
+              $html .= '<span class="fotj-quote-author">' . get_field('quote_author',$content_block['aside']->ID) . '</span>';
+              $html .= '</div>';
+            } else {
+              $html .=  $content_block['aside']->post_content;
+            }
           }
+          $html .= '</div>';
+          $html .= '<div class="fotj-content">';
+          if ($content_block['main_text']){   
+            $html .= $content_block['main_text'];
+          }
+          $html .= '</div>';
         }
-        $html .= '</div>';
-        $html .= '<div class="fotj-content">';
-        if ($content_block['main_text']){   
-          $html .= $content_block['main_text'];
-        }
-        $html .= '</div>';
       }
+      return $html;
     }
-    return $html;
+
   }
 
+  //ACF STUFF
+  add_filter('acf/settings/save_json', 'river_acf_json_save_point');
+   
+  function river_acf_json_save_point( $path ) {
+      // update path
+      $path = get_stylesheet_directory() . '/acf-json';
+      // return
+      return $path;
+  }
+
+  add_filter('acf/settings/load_json', 'river_acf_json_load_point');
+
+  function river_acf_json_load_point( $paths ) {
+      // remove original path (optional)
+      unset($paths[0]);
+      // append path
+      $paths[] = get_stylesheet_directory() . '/acf-json';    
+      // return
+      return $paths;
+      
+  }
 }
-
-//ACF STUFF
-add_filter('acf/settings/save_json', 'river_acf_json_save_point');
- 
-function river_acf_json_save_point( $path ) {
-    // update path
-    $path = get_stylesheet_directory() . '/acf-json';
-    // return
-    return $path;
-}
-
-add_filter('acf/settings/load_json', 'river_acf_json_load_point');
-
-function river_acf_json_load_point( $paths ) {
-    // remove original path (optional)
-    unset($paths[0]);
-    // append path
-    $paths[] = get_stylesheet_directory() . '/acf-json';    
-    // return
-    return $paths;
-    
-}
-
