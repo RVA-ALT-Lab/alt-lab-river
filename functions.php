@@ -195,11 +195,8 @@ function river_header_images(){
         } else {
           $html .= '<div class="fotj-sidebar">';
           if ($content_block['aside']){
-            if(get_field('aside_type',$content_block['aside']->ID)) {
-              $html .= '<div class="fotj-quote">';
-              $html .=  $content_block['aside']->post_content;
-              $html .= '<span class="fotj-quote-author">' . get_field('quote_author',$content_block['aside']->ID) . '</span>';
-              $html .= '</div>';
+            if(get_field('aside_type',$content_block['aside']->ID) && get_field('aside_type',$content_block['aside']->ID) === 'quote') {
+               $html .= river_quote_maker($content_block['aside']);
             } else {
               $html .=  $content_block['aside']->post_content;
             }
@@ -214,6 +211,17 @@ function river_header_images(){
       }
       return $html;
     }
+
+  }
+
+
+  function river_quote_maker($aside){
+     $html = '';
+     $html .= '<div class="fotj-quote">';
+     $html .=  $aside->post_content;
+     $html .= '<span class="fotj-quote-author">' . get_field('quote_author',$aside->ID) . '</span>';
+     $html .= '</div>';
+     return $html;
 
   }
 
