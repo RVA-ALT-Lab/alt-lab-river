@@ -19,7 +19,7 @@
             "min": 0,
             "max": 0,
             "layout": "block",
-            "button_label": "",
+            "button_label": "Add image",
             "sub_fields": [
                 {
                     "key": "field_5dcb03aabb2d5",
@@ -64,7 +64,7 @@
             "min": 0,
             "max": 0,
             "layout": "table",
-            "button_label": "",
+            "button_label": "Add content",
             "sub_fields": [
                 {
                     "key": "field_5dcb0de584af5",
@@ -160,5 +160,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1574087865
+    "modified": 1574088902
 }
