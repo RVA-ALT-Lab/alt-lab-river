@@ -172,7 +172,7 @@ function river_header_images(){
 }
 
 //make sure ACF IS ON
-if (!class_exists('ACF')) {
+if (class_exists('ACF')) {
 
   function river_main_text(){
     $main_content = get_field('main_content');
