@@ -159,6 +159,19 @@ function bannerMaker(){
 
 add_filter('show_admin_bar', '__return_false');
 
+if (!class_exists('ACF')) {
+  function river_header_images() {
+    return 'Please activate the ACF Pro plugin';
+  }
+  function river_main_text() {
+    return 'Please activate the ACF Pro plugin';
+  }
+}
+
+
+//make sure ACF IS ON
+if (class_exists('ACF')) {
+
 
 function river_header_images(){
   $images = get_field("header_images");
@@ -170,9 +183,6 @@ function river_header_images(){
      }
      return $html;
 }
-
-//make sure ACF IS ON
-if (class_exists('ACF')) {
 
   function river_main_text(){
     $main_content = get_field('main_content');

@@ -11,8 +11,8 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "30",
-                "class": "",
+                "width": "",
+                "class": "repeat-horizontal",
                 "id": ""
             },
             "collapsed": "field_5dcb03aabb2d5",
@@ -160,5 +160,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1573841865
+    "modified": 1574087865
 }
