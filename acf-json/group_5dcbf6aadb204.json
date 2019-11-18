@@ -16,9 +16,9 @@
                 "id": ""
             },
             "choices": {
-                "Quote": "Quote",
-                "HTML": "HTML",
-                "Factoid": "Factoid"
+                "quote": "Quote",
+                "html": "HTML",
+                "factoid": "Factoid"
             },
             "default_value": [],
             "allow_null": 0,
@@ -73,5 +73,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1573678043
+    "modified": 1574104768
 }
