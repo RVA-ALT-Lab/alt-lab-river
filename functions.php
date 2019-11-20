@@ -173,6 +173,15 @@ if (!class_exists('ACF')) {
 if (class_exists('ACF')) {
 
 
+  function river_header_logo_abbr(){
+    $logo_abbr = get_field("menu_logo_abbr");
+    $html = '';
+    if( $logo_abbr ){ 
+          $html .= '<div class="logo-abbr">' . $logo_abbr . '</div>';
+          }
+        return $html;
+  }
+  
 function river_header_images(){
   $images = get_field("header_images");
   $html = '';

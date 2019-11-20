@@ -1,4 +1,6 @@
 
+node_modules/natives/index.js
+node_modules/natives/package.json
 node_modules/node-gyp/gyp/pylib/gyp/__init__.pyc
 node_modules/node-gyp/gyp/pylib/gyp/common.pyc
 node_modules/node-gyp/gyp/pylib/gyp/generator/__init__.pyc
@@ -145,3 +147,15 @@ node_modules/node-sass/build/Release/sass.a
 node_modules/node-sass/build/src/libsass.Makefile
 node_modules/node-sass/build/src/libsass.target.mk
 node_modules/node-sass/vendor/darwin-x64-67/binding.node
+package-lock.json
+package.json
+package.json
+package-lock.json
+node_modules/natives/package.json
+node_modules/natives/index.js
+node_modules/natives/index.js
+node_modules/natives/package.json
+package-lock.json
+package.json
+node_modules/natives/package.json
+node_modules/natives/index.js

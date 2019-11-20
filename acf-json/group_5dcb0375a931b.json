@@ -3,6 +3,25 @@
     "title": "Major Pages",
     "fields": [
         {
+            "key": "field_5dd558c17d4c6",
+            "label": "Menu Logo Abbreviation",
+            "name": "menu_logo_abbr",
+            "type": "text",
+            "instructions": "Type only 4 letters as the abbreviation for your site",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "4 letters",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5dcb0390bb2d4",
             "label": "Header Images",
             "name": "header_images",
@@ -157,8 +176,23 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "permalink",
+        "the_content",
+        "excerpt",
+        "discussion",
+        "comments",
+        "revisions",
+        "slug",
+        "author",
+        "format",
+        "page_attributes",
+        "featured_image",
+        "categories",
+        "tags",
+        "send-trackbacks"
+    ],
     "active": 1,
     "description": "",
-    "modified": 1574088902
+    "modified": 1574264142
 }
