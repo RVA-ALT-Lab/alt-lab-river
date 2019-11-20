@@ -10,7 +10,7 @@
 
 	<header class="entry-header">
 
-		<div class="logo-abbr">FOTJ</div>
+		<?php echo river_header_logo_abbr(); ?>
 
 	</header><!-- .entry-header -->
 
