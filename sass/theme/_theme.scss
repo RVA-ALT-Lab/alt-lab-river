@@ -369,6 +369,23 @@ header {
   margin-bottom: 20px;
 }
 
+.intro p:first-of-type::first-letter {
+  font-family: Fjalla One, sans-serif;
+      font-weight: 400;
+      color:#212529;
+      float: left;
+      // display: inline-block;
+      padding-top: .8rem;
+      margin-right: .625rem;
+      text-transform: uppercase;
+      vertical-align: text-top;
+      font-size: 6.2rem;
+      height: .8em;
+      line-height: 1rem;
+      background-image: url("../imgs/tiny_threelinewave.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+}
 
   h2 {
     font-family: Boogaloo, sans-serif;
