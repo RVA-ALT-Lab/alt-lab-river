@@ -211,7 +211,12 @@ function river_header_images(){
             }
           }
           $html .= '</div>';
-          $html .= '<div class="fotj-content">';
+          $intro = '';
+          if ($content_block['content_type'] === 'intro'){
+            $intro = ' intro';
+            // var_dump($content_block['content_type']);
+          }
+          $html .= '<div class="fotj-content' . $intro . '">';
           if ($content_block['main_text']){   
             $html .= $content_block['main_text'];
           }
@@ -222,7 +227,6 @@ function river_header_images(){
     }
 
   }
-
 
   function river_quote_maker($aside){
      $html = '';
