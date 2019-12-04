@@ -155,7 +155,7 @@
                         "aside"
                     ],
                     "taxonomy": "",
-                    "allow_null": 0,
+                    "allow_null": 1,
                     "multiple": 0,
                     "return_format": "object",
                     "ui": 1
@@ -195,5 +195,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1574362378
+    "modified": 1575471496
 }
