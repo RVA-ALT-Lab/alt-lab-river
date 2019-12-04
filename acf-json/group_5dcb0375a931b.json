@@ -144,6 +144,13 @@
                                 "operator": "==",
                                 "value": "regular"
                             }
+                        ],
+                        [
+                            {
+                                "field": "field_5dcc11850f73c",
+                                "operator": "==",
+                                "value": "intro"
+                            }
                         ]
                     ],
                     "wrapper": {
@@ -195,5 +202,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1575471496
+    "modified": 1575474193
 }
