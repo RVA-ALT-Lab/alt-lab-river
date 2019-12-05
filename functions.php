@@ -168,6 +168,8 @@ if (!class_exists('ACF')) {
   }
 }
 
+//remove image width on shortcoded inline images
+add_filter( 'img_caption_shortcode_width', '__return_false' );
 
 //make sure ACF IS ON
 if (class_exists('ACF')) {
@@ -202,7 +204,18 @@ function river_header_images(){
         if ($content_block['content_type'] == 'full-width'){
           $html .= '<div>' . $content_block['main_text'] . '</div>';
         } else {
-          $html .= '<div class="fotj-sidebar">';
+           if (get_field('aside_alignment',$content_block['aside']->ID)){
+            if (get_field('aside_alignment',$content_block['aside']->ID) === 'top'){
+              $alignment = 'top';
+            }
+            else if (get_field('aside_alignment',$content_block['aside']->ID) === 'middle'){
+              $alignment = 'middle';
+            }
+            else {
+              $alignment = 'bottom';
+            }
+          }
+          $html .= '<div class="fotj-sidebar '. $alignment .'">';
           if ($content_block['aside']){
             if(get_field('aside_type',$content_block['aside']->ID) && get_field('aside_type',$content_block['aside']->ID) === 'quote') {
                $html .= river_quote_maker($content_block['aside']);
