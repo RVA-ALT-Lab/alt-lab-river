@@ -245,7 +245,7 @@ function river_header_images(){
      $html = '';
      $html .= '<div class="fotj-quote">';
      $html .=  $aside->post_content;
-     $html .= '<span class="fotj-quote-author">' . get_field('quote_author',$aside->ID) . '</span>';
+     $html .= '<span class="fotj-quote-author">– ' . get_field('quote_author',$aside->ID) . '</span>';
      $html .= '</div>';
      return $html;
 
