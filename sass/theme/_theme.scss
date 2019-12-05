@@ -325,7 +325,7 @@ header {
 
 .middle {
   vertical-align: text-bottom;
-  margin-bottom: 25%;
+  margin-bottom: 15%;
 }
 
 .bottom {
@@ -693,7 +693,11 @@ figure img  {
     display: none;
   }
   .fotj-sidebar {
-    display: none;
+    display: table-cell;
+    background-color: #f7f7f7;
+  }
+  .fotj-quote {
+    margin-top: 0;
   }
   .fotj-content {
     padding: 20px 2% 20px 15%;
