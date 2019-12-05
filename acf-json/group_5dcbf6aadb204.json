@@ -29,6 +29,32 @@
             "placeholder": ""
         },
         {
+            "key": "field_5de80a38f6f89",
+            "label": "Aside Alignment",
+            "name": "aside_alignment",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "top": "Top",
+                "middle": "Middle",
+                "bottom": "Bottom"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_5dcbf74a0aa28",
             "label": "Quote Author",
             "name": "quote_author",
@@ -73,5 +99,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1574104768
+    "modified": 1575489036
 }
