@@ -351,7 +351,8 @@ header {
   line-height: 1.4em;
   margin-top: .5em;
   margin-bottom: 10px;
-  letter-spacing: -0.03em
+  letter-spacing: -0.03em;
+  padding: 0 .3em;
 }
 
 .fotj-quote {
@@ -399,7 +400,7 @@ figure img  {
       vertical-align: text-top;
       font-size: 6.2rem;
       height: .8em;
-      line-height: 1rem;
+      line-height: .9em;
       background-image: url("../imgs/tiny_threelinewave.svg");
       background-repeat: no-repeat;
       background-position: center;
