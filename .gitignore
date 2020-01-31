@@ -159,3 +159,6 @@ package-lock.json
 package.json
 node_modules/natives/package.json
 node_modules/natives/index.js
+sass/.DS_Store
+.DS_Store
+sass/.DS_Store
